@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Register form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+
+    <nav id="navbar" class="navbar navbar-default sticky-top" style="background-color: #439A86;">
+        <div class="container w-3/4">
+            <div class="navbar-header">
+                <a class="navbar-brand nav-links" href="index.html" style="color: white;">Home</a>
+            </div>
+        </div>
+    </nav>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Service</th>
+                </tr>
+            </thead>
+            <tbody class="table-body" id="table-body">
+                <tr>
+                    <!-- <th scope="row">1</th>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+<script>
+    var list = JSON.parse(localStorage.getItem('registerations'));
+    console.log(list);
+    if (typeof (list) != 'undefined' && list.length > 0) {
+        var tablebody = document.getElementById('table-body');
+        console.log(tablebody);
+        // console.log(list);
+        // console.log(list);
+        for (let index = 0; index < list.length; index++) {
+            var element = list[index];
+            element = JSON.parse(element);
+            // if (element['name'] === 'undefined') {
+            //     continue;
+            // }
+            if (element['name']) {
+                var tr = document.createElement('tr');
+                var numbertd = document.createElement('td');
+                var nametd = document.createElement('td');
+                var emailtd = document.createElement('td');
+                var servicetd = document.createElement('td');
+                numbertd.innerText = index;
+                tr.appendChild(numbertd);
+                nametd.innerText = element['name'];
+                tr.appendChild(nametd);
+                emailtd.innerText = element['email'];
+                tr.appendChild(emailtd);
+                servicetd.innerText = element['service'];
+                tr.appendChild(servicetd);
+
+                tablebody.appendChild(tr);
+            }
+        }
+    }
+</script>
+
+</html>

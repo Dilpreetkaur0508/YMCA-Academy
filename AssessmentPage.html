@@ -1,0 +1,329 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script type="text/javascript" src="jscode.js"></script>
+    <title>Assessment Page</title>
+    <script>
+        function submitTest() {
+            let next = document.getElementById('next');
+            let submit = document.getElementById('submitTest');
+
+            next.style.display = "none";
+            submit.style.display = "block";
+
+        }
+        var i = 1;
+
+        function nextQuestions() {
+
+            let option1Color = document.getElementById('option1');
+            let option2Color = document.getElementById('option2');
+            let option3Color = document.getElementById('option3');
+            let option4Color = document.getElementById('option4');
+
+            option1Color.style.backgroundColor="white";
+            option2Color.style.backgroundColor="white";
+            option3Color.style.backgroundColor="white";
+            option4Color.style.backgroundColor="white";
+
+            option1Color.disabled=false;
+            option2Color.disabled=false;
+            option3Color.disabled=false;
+            option4Color.disabled=false;
+
+            let option1 = document.getElementById('optionText1');
+            let option2 = document.getElementById('optionText2');
+            let option3 = document.getElementById('optionText3');
+            let option4 = document.getElementById('optionText4');
+            let qstns = document.getElementById('questionBody');
+            const ques = ['What would you like to do after completing your homework?',
+                'What will you do if you leave your lunch at home?',
+                'What will you do to invite a new classmate to your party?',
+                'What will you do if you find gums all over your pants?',
+                'What will you do if you have extra food with you?'
+            ];
+            const chessOptions = ['You would like to study more', 'Can starve', 'Ask help from other friends',
+                'Calmly handle the situation', 'Will take less food initially'
+            ];
+            const artOptions = ['You would like to do recreational activities', 'Share with a friend',
+                ' Make a card to invite them', ' Find ways to cover it', 'Will take home'
+            ];
+            const meditationOptions = ['You would like to sleep', 'Cannot starve', 'Gets excited unnecessarily',
+                'Get hyper', 'Will eat full'
+            ];
+            const yogaOptions = ['You would like to play with your friends', 'Eat from outside/junk food',
+                'Takes an unplanned action', 'Gets irritated by comments', 'Will throw the extra food'
+            ];
+
+            qstns.innerHTML = ques[i];
+
+            option1.innerHTML = chessOptions[i];
+            option2.innerHTML = artOptions[i];
+            option3.innerHTML = meditationOptions[i];
+            option4.innerHTML = yogaOptions[i];
+            i++;
+            if (i == 5) {
+
+                submitTest();
+            }
+        }
+
+        var chessCounter = 0,
+            artCounter = 0,
+            meditationCounter = 0,
+            yogaCounter = 0;
+
+        function chessMapping(key) {
+     
+            let key2 = document.getElementById(key);
+            key2.style.backgroundColor="green";
+            chessCounter++;
+
+            let option2Color = document.getElementById('option2');
+            let option3Color = document.getElementById('option3');
+            let option4Color = document.getElementById('option4');
+
+            option2Color.disabled=true;
+            option3Color.disabled=true;
+            option4Color.disabled=true;
+        }
+
+        function artMapping(key) {
+
+            let key2 = document.getElementById(key);
+            key2.style.backgroundColor="green";
+
+            artCounter++;
+
+            let option1Color = document.getElementById('option2');
+            let option3Color = document.getElementById('option3');
+            let option4Color = document.getElementById('option4');
+
+            option1Color.disabled=true;
+            option3Color.disabled=true;
+            option4Color.disabled=true;
+        }
+
+        function meditationMapping(key) {
+
+            let key2 = document.getElementById(key);
+            key2.style.backgroundColor="green";
+
+            meditationCounter++;
+
+            let option1Color = document.getElementById('option2');
+            let option2Color = document.getElementById('option3');
+            let option4Color = document.getElementById('option4');
+
+            option1Color.disabled=true;
+            option2Color.disabled=true;
+            option4Color.disabled=true;
+        }
+
+        function yogaMapping(key) {
+
+            let key2 = document.getElementById(key);
+            key2.style.backgroundColor="green";
+
+            yogaCounter++;
+
+            let option1Color = document.getElementById('option2');
+            let option2Color = document.getElementById('option3');
+            let option3Color = document.getElementById('option4');
+
+            option1Color.disabled=true;
+            option2Color.disabled=true;
+            option3Color.disabled=true;
+        }
+
+        function evaluation() {
+
+            let testpage = document.getElementById("container");
+            let report = document.getElementById("reportContainer");
+            let sugg1 = document.getElementById("Text1");
+            let sugg2 = document.getElementById("Text2");
+            let sugg3 = document.getElementById("Text3");
+
+            testpage.style.filter = "blur(30px)";
+            report.style.display = "block";
+
+            if (chessCounter > artCounter && chessCounter > meditationCounter && chessCounter > yogaCounter) {
+                
+                sugg1.innerHTML="CHESS";
+                sugg2.innerHTML="ART";
+                sugg3.innerHTML="YOGA";
+            }
+            if (artCounter > chessCounter && artCounter > meditationCounter && artCounter > yogaCounter) {
+
+                sugg1.innerHTML="ART";
+                sugg2.innerHTML="MEDITATION";
+                sugg3.innerHTML="YOGA";
+            }
+            if (meditationCounter > chessCounter && meditationCounter > artCounter && meditationCounter >
+                yogaCounter) {
+                sugg1.innerHTML="MEDITATION";
+                sugg2.innerHTML="ART";
+                sugg3.innerHTML="CHESS";                    
+
+            }
+            if (yogaCounter > chessCounter && yogaCounter > artCounter && yogaCounter > meditationCounter) {
+
+                sugg1.innerHTML="YOGA";
+                sugg2.innerHTML="CHESS";
+                sugg3.innerHTML="MEDITATION";     
+            }
+            if (yogaCounter == chessCounter && yogaCounter + chessCounter == 4) {
+
+                sugg1.innerHTML="CHESS";
+                sugg2.innerHTML="ART";
+                sugg3.innerHTML="YOGA";     
+            }
+            if (yogaCounter == artCounter && yogaCounter + artCounter == 4) {
+
+                sugg1.innerHTML="ART";
+                sugg2.innerHTML="MEDITATION";
+                sugg3.innerHTML="YOGA";     
+            }
+            if (yogaCounter == meditationCounter && yogaCounter + meditationCounter == 4) {
+
+                sugg1.innerHTML="MEDITATION";
+                sugg2.innerHTML="CHESS";
+                sugg3.innerHTML="YOGA";     
+            }
+            if (meditationCounter == yogaCounter && yogaCounter + meditationCounter == 4) {
+
+                sugg1.innerHTML="YOGA";
+                sugg2.innerHTML="MEDITATION";
+                sugg3.innerHTML="YOGA";     
+            }
+            if (meditationCounter == artCounter && yogaCounter + artCounter == 4) {
+
+                sugg1.innerHTML="ART";
+                sugg2.innerHTML="CHESS";
+                sugg3.innerHTML="YOGA";     
+            }
+            if (meditationCounter == chessCounter && yogaCounter + chessCounter == 4) {
+
+                sugg1.innerHTML="CHESS";
+                sugg2.innerHTML="ART";
+                sugg3.innerHTML="YOGA";     
+            }
+            if (chessCounter == yogaCounter && yogaCounter + chessCounter == 4) {
+
+                sugg1.innerHTML="YOGA";
+                sugg2.innerHTML="MEDITATION";
+                sugg3.innerHTML="ART";     
+            }
+            if (chessCounter == artCounter && artCounter + chessCounter == 4) {
+
+                sugg1.innerHTML="ART";
+                sugg2.innerHTML="CHESS";
+                sugg3.innerHTML="YOGA";     
+            }
+            if (chessCounter == meditationCounter && meditationCounter + chessCounter == 4) {
+
+                sugg1.innerHTML="CHESS";
+                sugg2.innerHTML="ART";
+                sugg3.innerHTML="YOGA";     
+            }
+            if (artCounter == meditationCounter && meditationCounter + artCounter == 4) {
+
+                sugg1.innerHTML="MEDITATION";
+                sugg2.innerHTML="ART";
+                sugg3.innerHTML="CHESS";     
+            }
+            if (artCounter == yogaCounter && yogaCounter + artCounter == 4) {
+
+                sugg1.innerHTML="YOGA";
+                sugg2.innerHTML="ART";
+                sugg3.innerHTML="CHESS";     
+            }
+            if (artCounter == chessCounter && chessCounter + artCounter == 4) {
+
+                sugg1.innerHTML="ART";
+                sugg2.innerHTML="CHESS";
+                sugg3.innerHTML="MEDITATION";     
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    
+    <nav id="navbar" class="navbar navbar-default sticky-top" style="background-color: #439A86;">
+        <div class="container w-3/4">
+          <div class="navbar-header">
+            <a class="navbar-brand nav-links" href="#" style="color: white;">YMCA</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" class="nav-links">Home</a></li>
+              <li><a href="#about" class="nav-links">About</a></li>
+              <li><a href="#courses" class="nav-links">Courses</a></li>
+              <li><a href="#testHeading1" class="nav-links">Testimonials</a></li>
+              <li><a href="#achievement" class="nav-links">Achievements</a></li>
+              <li><a href="contact.html" target="_blank" class="nav-links">Contact</a></li>
+              <li><a href="#" class="nav-links" onclick="showbanner()">Psychometric Test</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div id="container">
+        <div id="questionBox">
+            <p id="questionBody">What would you like to do after completing your homework?</p>
+        </div>
+        <div id="optionBox">
+                <button type="submit" id="option1" onclick="chessMapping(this.id)">
+                    <p id="optionText1">You would like to study more</p>
+                </button>
+                <button type="submit" id="option2" onclick="artMapping(this.id)">
+                    <p id="optionText2">You would like to do recreational activities</p>
+                </button>
+                <button type="submit" id="option3" onclick="meditationMapping(this.id)">
+                    <p id="optionText3">You would like to sleep</p>
+                </button>
+                <button type="submit" id="option4"   onclick="yogaMapping(this.id)">
+                    <p id="optionText4">You would like to play with your friends</p>
+                </button>
+        </div>
+        <button id="next" onclick="nextQuestions()">Next</button>
+        <button id="submitTest" onclick="evaluation()">Submit</button>
+    </div>
+
+    <!--------------------------------Report---------------------------------->
+
+    <div id="reportContainer">
+        <div id="borderLine"><img src="images/logo2.png">
+            <h2>Your Interest Report</h2>
+        </div>
+        <div class="flex-container">
+            <div class="flex-item-left">
+                <h4 id="reportHeading">Top 3 Activities For You</h4>
+                <ul id=reportOptions>
+                    <li id="Text1">.</li>
+                    <li id="Text2">.</li>
+                    <li id="Text3">.</li>
+                </ul>
+            </div>
+            <div class="flex-item-right"><img src="images/left2.png"></div>
+        </div>
+    </div>
+</body>
+
+</html>
