@@ -427,10 +427,11 @@ a {
   margin-bottom:15px
 }
 h1.heading {
-  font-size: 1.12em;
-  font-weight: 900;
   margin: 0 0 0.5em;
   color: #1e4360;
+  font-size: 4rem;
+  font-weight: bolder;
+  padding-top: 10px;
 }
 
 .card-detail{
