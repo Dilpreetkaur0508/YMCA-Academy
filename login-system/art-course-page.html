@@ -1,0 +1,98 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Art Course</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script type="text/javascript" src="jscode.js"></script>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <script type="text/javascript">
+    function closeLesson() {
+
+      window.open("index.html");
+    }
+
+    var i = -1,
+      j = 2;
+
+    function nextLesson() {
+
+      i += 1;
+      let lesson_no = document.getElementById("lesson-number");
+      let video = document.getElementById("video");
+      let next = document.getElementById("next-lesson");
+      let close = document.getElementById("close-lesson");
+      if (i == 3) {
+        next.style.display = "none";
+        close.style.display = "block";
+      }
+
+      const lesson = ['https://www.youtube.com/embed/qARrNEx-b2Y',
+        'https://www.youtube.com/embed/eQMQbkn5AcY',
+        'https://www.youtube.com/embed/I68tFBhC5uQ',
+        'https://www.youtube.com/embed/euKg1RUiTQ4'
+      ];
+
+      video.src = lesson[i];
+      lesson_no.innerHTML = j;
+      j += 1;
+
+
+    }
+  </script>
+</head>
+
+<body>
+
+  <nav id="navbar" class="navbar navbar-default sticky-top" style="background-color: #439A86;">
+    <div class="container w-3/4">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand nav-links" href="#" style="color: white;">YMCA</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html" class="nav-links">Home</a></li>
+          <li><a href="#about" class="nav-links">About</a></li>
+          <li><a href="#courses" class="nav-links">Courses</a></li>
+          <li><a href="#testHeading1" class="nav-links">Testimonials</a></li>
+          <li><a href="#achievement" class="nav-links">Achievements</a></li>
+          <li><a href="contact.html" target="_blank" class="nav-links">Contact</a></li>
+          <li><a href="#" class="nav-links" onclick="showbanner()">Psychometric Test</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="course-window" class="mx-auto h-screen mx-16 items-stretch flex flex-col justify-center">
+    <h1>Lesson <span id="lesson-number">1</span></h1>
+    <div class="flex w-full h-full justify-center items-center">
+      <embed id="video" src="https://www.youtube.com/embed/ewMksAbgdBI" type="video/mp4" allow="accelerometer; autoplay; clipboard-write; 
+      encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="md:h-2/3 md:w-2/3 w-full h-1/2"
+        height="100%" width="100%">
+    </div>
+    <button type="submit" id="next-lesson" class="mx-auto px-12 py-2" onclick="nextLesson()">Next</button>
+    <button type="submit" id="close-lesson" class="mx-auto px-12 py-2" onclick="closeLesson()">Close</button>
+
+  </div>
+
+</body>
+
+</html>

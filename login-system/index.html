@@ -1,0 +1,641 @@
+
+<!Doctype html>
+<html>
+
+<head>
+  <title>YMCA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://shreyansh30saxena.github.io/stylesheet/stylesheet.css">
+  <script type="text/javascript" src="https://shreyansh30saxena.github.io/stylesheet/jscode.js"></script>
+  <link rel="icon" type="image/png" href="images/logo.png"/>
+</head>
+
+<body>
+
+  <nav id="navbar" class="navbar navbar-default sticky-top" 
+          style="background-color: #439A86;">
+    <div class="container w-3/4">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand nav-links" href="#" style="color: white;">YMCA</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" class="nav-links">Home</a></li>
+          <li><a href="#about" class="nav-links">About</a></li>
+          <li><a href="#courses" class="nav-links">Courses</a></li>
+          <li><a href="#testHeading1" class="nav-links">Testimonials</a></li>
+          <li><a href="#achievement" class="nav-links">Achievements</a></li>
+          <li><a href="contact.html" target="_blank" class="nav-links">Contact</a></li>
+          <li><a href="#" class="nav-links" onclick="showbanner()">Psychometric Test</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container relative">
+    <div id="banner">
+      <div class="banner-content">
+        <h1 id="headingHeader">YMCA</h1>
+        <h5 id="subHeading">YOGA. MEDITATION. CHESS. ART</h5>
+        <button id="explore" type="button" class="btn btn-success btn-rounded">Explore →</button>
+      </div>
+      <div id="bannerImage">
+        <img src="https://ik.imagekit.io/g3qdfprt92l/banner2_ROBgt3cI4Hp.png?updatedAt=1636218022026" alt="yogaChess">
+      </div>
+    </div>
+
+
+
+    <div id="formFloat"><a href="contact.html"><i id="contactIcon" class="fa fa-address-card-o"
+          aria-hidden="true"></i></a>
+    </div>
+
+    <div id="quizBanner">
+      <div id="imageContainer">
+        <img src="https://ik.imagekit.io/g3qdfprt92l/confused2_655Gx1H3p.gif?updatedAt=1636218026041" alt="confused">
+      </div>
+      <div id="quizInfoContainer">
+        <marquee width="100%" direction="right" height="100px">
+          This Test is Absolutely Free
+        </marquee>
+        <h1>Confused?</h1>
+        <p>Take a Specially Structured Psychometric Test for kids to help them find the best
+        course for them to excel in short time</p>
+        <button id="take" type="submit"><a href="AssessmentPage.html">Take Test</a></button>
+        <button id="leave" type="submit" onclick="notNow()"><a href="#">Not Now</a></button>
+        </p>
+      </div>
+    </div>
+
+    <div id="about">
+      <h2 id="aboutHeading">
+        ABOUT
+      </h2>
+      <div id="aboutImage">
+        <img src="https://ik.imagekit.io/g3qdfprt92l/about_YmIzAoTms.jpeg?updatedAt=1636218017942" alt="about">
+        <h5 id="matter">
+          Here in YMCA, we work as a team to bring the best out of every child in whatever field they want
+          to work on. Trained teachers and staff to accompany children at every point of learning.In the upcoming world,
+          education with other skills is something that should be with everyone, so keeping that in mind we want our
+          children to acquire skills be it in any field.
+        </h5>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <section class="wrapper">
+      <div class="container-fostrap">
+          <div>
+              <h1 class="heading" id="courses">
+                  COURSES WE OFFER
+              </h1>
+              <br><br><br>
+          </div>
+          <div class="content">
+              <div class="container" >
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-3">
+                          <div class="card">
+                              <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                              <img src="https://ik.imagekit.io/g3qdfprt92l/art_SLteBRRpUt0.png?updatedAt=1636218018950" />
+                            </a>
+                              <div class="card-content">
+                                  <h4 class="card-title">
+                                      <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> ART
+                                    </a>
+                                  </h4>
+                                  <p class="card-detail">
+                                      Creativity is contagious, pass it on.
+                                  </p>
+                              </div>
+                              <div class="card-read-more">
+                                  <a href="Register.html" class="btn btn-link btn-block">
+                                      Register
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-3">
+                          <div class="card">
+                              <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
+                              <img src="https://ik.imagekit.io/g3qdfprt92l/yoga_xdY3vRIvO.jpg?updatedAt=1636218035175" />
+                            </a>
+                              <div class="card-content">
+                                  <h4 class="card-title">
+                                      <a href="http://www.fostrap.com/2016/02/awesome-material-design-responsive-menu.html"> YOGA
+                                    </a>
+                                  </h4>
+                                  <p class="card-detail">
+                                     Don't battle with your mind.
+                                  </p>
+                              </div>
+                              <div class="card-read-more">
+                                  <a href="Register.html" class="btn btn-link btn-block">
+                                      Register
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-3">
+                        <div class="card">
+                            <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
+                            <img src="https://ik.imagekit.io/g3qdfprt92l/chess_PXTQcBmpURZ.jpg?updatedAt=1636218023647" />
+                          </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="http://www.fostrap.com/2016/02/awesome-material-design-responsive-menu.html"> CHESS
+                                  </a>
+                                </h4>
+                                <p class="card-detail">
+                                    The pin is mightier than the sword.
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="Register.html" class="btn btn-link btn-block">
+                                    Register
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="col-xs-12 col-sm-3">
+                          <div class="card">
+                              <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
+                              <img src="https://ik.imagekit.io/g3qdfprt92l/meditation_Of7CKaMOp.png?updatedAt=1636218031826" />
+                            </a>
+                              <div class="card-content">
+                                  <h4 class="card-title">
+                                      <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">MEDITATION
+                                    </a>
+                                  </h4>
+                                  <p class="card-detail">
+                                      Inhale the future, exhale the past.
+                                  </p>
+                              </div>
+                              <div class="card-read-more">
+                                  <a href="Register.html" class="btn btn-link btn-block">
+                                      Register
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <div class="tests">
+      <h2 id="testHeading1">WHAT OUR CLIENTS SAY</h2><br><br>
+      <div class="testimonials">
+        <figure class="snip1139">
+          <blockquote>I have learnt alot of skills from this academy. It was my best decision to join the academy.
+            <div class="arrow"></div>
+          </blockquote>
+          <a href=""><img class="test1" src="https://ik.imagekit.io/g3qdfprt92l/shreyansh_gP7wPR4Mkte.jpeg?updatedAt=1636218034333" alt="sample3" /></a>
+          <div class="author">
+            <h5>Shreyansh Saxena <span>- Chess Expert</span></h5>
+          </div>
+        </figure>
+
+        <figure class="snip1139 hover">
+          <blockquote>I was a beginner in yoga but have attained alot more flexibilty and strength after continuing from
+            here.
+            <div class="arrow"></div>
+          </blockquote>
+          <a href=""><img class="test1" src="https://ik.imagekit.io/g3qdfprt92l/jasnoor_U-ZgQ640W.jpeg?updatedAt=1636218027708" alt="sample47" /></a>
+          <div class="author">
+            <h5>Jasnoor Kaur<span>-Yoga Trainer</span></h5>
+          </div>
+        </figure>
+
+        <figure class="snip1139">
+          <blockquote>I couldnt get time to pursue my passion of art, but this academy has given me an opportunity to
+            fulfill. it
+            <div class="arrow"></div>
+          </blockquote>
+          <a href=""><img class="test1" src="https://ik.imagekit.io/g3qdfprt92l/dilpreet_gxDl1rpcp73.jpeg?updatedAt=1636218026964" alt="sample17" /></a>
+          <div class="author">
+            <h5>Dilpreet Kaur<span>- Artist</span></h5>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="achievement" class="achievements">
+      <br><br>
+      <h2 id="achHeading1">ACHIEVEMENTS</h2><br><br>
+      <div class="slideshow-container">
+        <div class="mySlides" id="fade">
+          <img src="https://ik.imagekit.io/g3qdfprt92l/award1_CYJc0aeLu.jpg?updatedAt=1636218019459" class="center">
+        </div>
+
+        <div class="mySlides" id="fade">
+          <img src="https://ik.imagekit.io/g3qdfprt92l/award2_GcsUnU1ErNU.jpg?updatedAt=1636218020246" class="center">
+        </div>
+
+        <div class="mySlides" id="fade">
+          <img src="https://ik.imagekit.io/g3qdfprt92l/award3_lhyA7MDZiS.jpg?updatedAt=1636218021108" class="center">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+  </div>
+  <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+  <footer class="text-gray-600 body-font bg-gray-800 mt-12" id="footer-mobile">
+    <div
+      class="container px-32 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+            viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-4xl">YMCA</span>
+        </a>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-large text-gray-200 tracking-widest text-2xl mb-3"><a href="#about">About</a></h2>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-large text-gray-200 tracking-widest text-2xl mb-3"><a href="#courses">Courses</a></h2>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-large text-gray-200 tracking-widest text-2xl mb-3"><a href="contact.html">Contact Us</a></h2>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-large text-gray-200 tracking-widest text-2xl mb-3"><a href="register.html">Register</a></h2>
+        </div>
+        
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-large text-gray-200 tracking-widest text-2xl mb-3"><a href="registerationsTable.html">View Registerations</a></h2>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-large text-gray-200 tracking-widest text-2xl mb-3">Email</a></h2>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-large text-gray-900 tracking-widest text-2xl mb-3"><input type="mail" name="mail" placeholder="abc@gmail.com" color= "black"><br><br></a></h2>
+        </div>
+      </div>
+      
+    </div>
+    <div class="bg-gray-900">
+      <div class="container mx-auto py-4 px-32 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-gray-500 text-2xl text-center sm:text-left">YMCA Academy
+          <p class="text-gray-600 ml-1" target="_blank">2021</p>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+              </path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <footer id="dk-footer" class="dk-footer footer-desktop">
+    <div class="container">
+        <div class="row">
+            <div id="footercard" class="col-md-6 col-lg-4">
+                <div class="dk-footer-box-info">
+                  <br>
+                    <a href="index.html" class="footer-logo">
+                        <img src="https://ik.imagekit.io/g3qdfprt92l/logo_WN44OL3QUR.png?updatedAt=1636218030253" alt="footer_logo" class="img-fluid">
+                    </a>
+                    <br><br>
+                    <div class="footer-social-link">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Social link -->
+                </div>
+                <!-- End Footer info -->
+            </div>
+            <!-- End Col -->
+            <div class="col-md-12 col-lg-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contact-us">
+                            <div class="contact-icon">
+                                <i class="fa fa-map-o" aria-hidden="true"></i>
+                            </div>
+                            <!-- End contact Icon -->
+                            <div class="contact-info">
+                                <h3>Delhi, India</h3>
+                                <p>XYZ Road</p>
+                            </div>
+                            <!-- End Contact Info -->
+                        </div>
+                        <!-- End Contact Us -->
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-md-6">
+                        <div class="contact-us contact-us-last">
+                            <div class="contact-icon">
+                                <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                            </div>
+                            <!-- End contact Icon -->
+                            <div class="contact-info">
+                                <h3>9999999999</h3>
+                                <p>Give us a call</p>
+                            </div>
+                            <!-- End Contact Info -->
+                        </div>
+                        <!-- End Contact Us -->
+                    </div>
+                    <!-- End Col -->
+                </div>
+                <!-- End Contact Row -->
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="footer-widget footer-left-widget">
+                            <div class="section-heading">
+                                <h3>Useful Links</h3>
+                                <span class="animate-border border-black"></span>
+                            </div>
+                            <ul>
+                              <li><a href="#about" class="nav-links">About</a></li>
+                              <li><a href="#courses" class="nav-links">Courses</a></li>
+                              <li><a href="#testHeading1" class="nav-links">Testimonials</a></li>
+                              <li><a href="#achievement" class="nav-links">Achievements</a></li>
+                              <li><a href="registrationsTable">Registrations</a></li>
+                            </ul>
+                            
+                        </div>
+                        <!-- End Footer Widget -->
+                    </div>
+                    <!-- End col -->
+                    <div class="col-md-12 col-lg-6">
+                        <div class="footer-widget">
+                            <div class="section-heading">
+                                <h3>Subscribe</h3>
+                                <span class="animate-border border-black"></span>
+                            </div>
+                            <p>Don’t miss the opportunity, kindly fill the form for further details..</p>
+                            <form action="#">
+                                <div class="form-row">
+                                    <div class="col dk-footer-form">
+                                        <input type="email" class="form-control" placeholder="Email Address">
+                                        <button type="submit">
+                                            <i class="fa fa-send"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- End form -->
+                        </div>
+                        <!-- End footer widget -->
+                    </div>
+                    <!-- End Col -->
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- End Col -->
+        </div>
+        <!-- End Widget Row -->
+    </div>
+    <!-- End Contact Container -->
+  
+  
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span></span>
+                </div>
+                <!-- End Col -->
+                <div class="col-md-6">
+                    <div class="copyright-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End col -->
+            </div>
+            <!-- End Row -->
+        </div>
+        <!-- End Copyright Container -->
+    </div>
+    
+  </footer>
+
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm" draggable="true">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea id="ans" placeholder="Type message.." name="msg" required></textarea>
+    <div id="result"></div>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+</script>
+
+<script type="text/javascript">
+  // chatbot
+  var questions = [
+      'What is your name ?',
+      'Where are you from?',
+      'What\'s your age?',
+      'What course do you prefer?',
+      'It was nice talking TO you :)'
+  ];
+  var num = 0;
+
+  var inputBox = document.querySelector("#ans");
+  var output = document.querySelector("#result");
+  output.innerHTML = questions[num];
+
+  function showResponse() {
+    var input = inputBox.value;
+    if(inputBox.value == "") {
+      
+    }else {
+    if(num == 0) {
+      output.innerHTML = `Hii ${input}`;
+      inputBox.value = "";
+      inputBox.setAttribute("placeholder","Wait for 2 seconds");
+      ++num;
+      setTimeout(changeQuestion, 2000);
+    } else if(num == 1) {
+      output.innerHTML = `${input} must be a good place`;
+      inputBox.value = "";
+      inputBox.setAttribute("placeholder","Wait for 2 seconds");
+      ++num;
+      setTimeout(changeQuestion, 2000);
+    } else if(num == 2) {
+      output.innerHTML = `So you are ${2021 - input} born`;
+      inputBox.value = "";
+      inputBox.setAttribute("placeholder","Wait for 2 seconds");
+      ++num;
+      setTimeout(changeQuestion, 2000);
+    } else if(num == 3) {
+      output.innerHTML = "<span>Awesome, Try taking our Psychometric Test..Here is a link for your reference! <a href = 'AssessmentPage.html'  target= '_blank'>CLICK HERE</a></span>";
+      inputBox.value = "";
+      inputBox.setAttribute("placeholder","Wait for 2 seconds");
+      ++num;
+      setTimeout(changeQuestion, 8000);
+    }
+    }
+  }
+
+  function changeQuestion() {
+    inputBox.setAttribute("placeholder", "Enter your response");
+    output.innerHTML = questions[num];
+    if(num == 4) {
+      inputBox.style.display = "none";
+    }
+  }
+
+  $(document).on('keypress', function(e) {
+    if(e.which == 13) {
+      showResponse();
+    }
+  })
+
+  $( "#ans" ).focus();
+
+</script>
+
+<script type="text/javascript">
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+
+</html>

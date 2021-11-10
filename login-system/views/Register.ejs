@@ -1,0 +1,164 @@
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login Form Tutorial</title>
+		<style>
+		.login-form {
+			width: 300px;
+			margin: 0 auto;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+		}
+		.login-form input[type="password"],
+		.login-form input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+		.login-form input[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="login-form">
+			<p> <%=(typeof alertMsg!='undefined')? alertMsg:''%></p>
+			<h1>Registerations Form</h1>
+			<form action="/register" method="POST">
+				<input type="text" name="username" placeholder="Username" required>
+				<input type="text" name="email" placeholder="Email" required>
+				<input type="password" name="password" placeholder="Password" required>
+				<input type="password" name="con_password" placeholder="Confirm Password" required>
+				<input type="submit">
+			</form>
+		</div>
+	</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Register form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="https://shreyansh30saxena.github.io/stylesheet/util.css">
+	<link rel="stylesheet" type="text/css" href="https://shreyansh30saxena.github.io/stylesheet/main.css">
+	
+</head>
+
+<body>
+
+	<nav id="navbar" class="navbar navbar-default sticky-top" style="background-color: #439A86;">
+		<div class="container w-3/4">
+		  <div class="navbar-header">
+			<a class="navbar-brand nav-links" href="index.html" style="color: white;">Home</a>
+		  </div>
+		</div>
+	</nav>
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+
+			<form class="contact100-form validate-form" action="/register" method="POST" >
+				<span class="contact100-form-title">
+					Register!
+					<p> <%=(typeof alertMsg!='undefined')? alertMsg:''%></p>
+				</span>
+				
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Your Name</span>
+					<input class="input100" type="text" name="name" placeholder="Enter your name" required>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<span class="label-input100">Email</span>
+					<input class="input100" type="text" name="email" placeholder="Enter your email addess" required>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Needed Services</span>
+					<div>
+						<select class="selection-2" name="service" id="service" required>
+							<option>Choose Services</option>
+							<option>Yoga</option>
+							<option>Meditation</option>
+							<option>Chess</option>
+							<option>Art</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<input type="submit" value="submit" style=" cursor: pointer; width : 100%; height : 30px; background-color: black; color: white;">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="jscode.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
