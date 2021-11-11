@@ -2,9 +2,11 @@
   "name": "login",
   "version": "1.0.0",
   "description": "login system",
+  "homepage": "http://Dilpreetkaur0508.github.io/YMCA_Academy",
   "main": "login.js",
   "scripts": {
-    "devStart": "echo \"Error: no test specified\" && exit 1"
+    "devStart": "echo \"Error: no test specified\" && exit 1",
+    "deploy" : "gh-pages"
   },
   "author": "",
   "license": "ISC",
